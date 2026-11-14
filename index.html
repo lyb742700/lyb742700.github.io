@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>진주헌 Mandarin Garden</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Pretendard,Noto Sans KR,sans-serif;
+}
+
+/* HEADER */
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  padding:32px 60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  z-index:9999;
+}
+
+/* LOGO */
+.main-logo{
+  border:1.5px solid #fff;
+  padding:12px 18px;
+  text-decoration:none;
+}
+
+.main-logo span{
+  color:#fff;
+  font-size:14px;
+  letter-spacing:2px;
+}
+
+/* RIGHT AREA */
+.header-right{
+  display:flex;
+  align-items:center;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  align-items:center;
+}
+
+nav a{
+  margin-left:36px;
+  font-size:14px;
+  letter-spacing:1px;
+  text-decoration:none;
+  color:#fff;
+}
+
+/* LANGUAGE BOX */
+.lang-buttons{
+  margin-left:30px;
+  border:1.5px solid #fff;
+  padding:6px 10px;
+  border-radius:6px;
+  background:rgba(0,0,0,0.3);
+  backdrop-filter:blur(4px);
+}
+
+.lang-buttons button{
+  margin:0 4px;
+  font-size:12px;
+  padding:6px 10px;
+  background:transparent;
+  border:1px solid #fff;
+  color:#fff;
+  cursor:pointer;
+  border-radius:4px;
+  transition:0.2s;
+}
+
+.lang-buttons button:hover{
+  background:#fff;
+  color:#000;
+}
+
+/* 메인 섹션 스타일 (화면 가득 채우고 중앙 정렬) */
+.main-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 비디오 숨김 처리 */
+.main-section video {
+  display: none !important;
+}
+
+/* 💡 사진 제어: 세로 사진이 잘리지 않고 화면 높이에 맞춰 한눈에 쏙 들어오게 설정 */
+.main-section img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100vh;
+  object-fit: contain;
+  z-index: 1;
+}
+
+/* 텍스트가 항상 사진 중앙 위에 선명하게 배치되도록 설정 */
+.hero-text{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+  color:#fff;
+  z-index: 2;
+  width: 100%;
+  pointer-events: none;
+}
+
+.hero-text h1{
+  font-size:42px;
+  letter-spacing:6px;
+  font-weight:500;
+  margin-bottom:16px;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.7);
+}
+
+.hero-text p{
+  font-size:16px;
+  letter-spacing:3px;
+  opacity:0.9;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.7);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  header{
+    padding:20px 24px;
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .header-right{
+    width:100%;
+    justify-content:space-between;
+    margin-top:14px;
+  }
+
+  nav a{
+    margin:0 12px;
+    font-size:13px;
+  }
+
+  .lang-buttons{
+    margin-left:0;
+    margin-top:10px;
+  }
+
+  .hero-text h1{
+    font-size:28px;
+  }
+
+  /* 모바일 화면에서는 꽉 차게 보이도록 변경 */
+  .main-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html" class="main-logo">
+    <span>JINJUHEON</span>
+  </a>
+
+  <div class="header-right">
+    <nav>
+      <a href="101.html" data-i18n="nav101">101동</a>
+      <a href="102.html" data-i18n="nav102">102동</a>
+      <a href="around.html" data-i18n="navAbout">숙소소개</a>
+      <a href="reservation.html" data-i18n="navReservation">예약</a>
+    </nav>
+
+    <div class="lang-buttons">
+      <button onclick="changeLanguage('ko')">KO</button>
+      <button onclick="changeLanguage('en')">EN</button>
+      <button onclick="changeLanguage('fr')">FR</button>
+      <button onclick="changeLanguage('zh')">中文</button>
+    </div>
+  </div>
+</header>
+
+<section class="main-section">
+  <video autoplay muted playsinline>
+    <source src="진주헌메인영상.mp4" type="video/mp4">
+  </video>
+
+  <img src="진주헌_main_1.JPG" alt="진주헌 귤밭">
+
+  <div class="hero-text">
+    <h1 data-i18n="mainTitle">스테이 진주헌</h1>
+    <p data-i18n="mainSub">MANDARIN GARDEN</p>
+    <p data-i18n="mainSub">JINJUHEON</p>
+    <p data-i18n="mainSub">감귤체험</p>
+  </div>
+</section>
+
+<script src="lang.js"></script>
+
+</body>
+</html>

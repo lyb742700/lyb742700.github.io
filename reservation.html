@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>진주헌 Mandarin Garden | 예약</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Pretendard, Noto Sans KR, sans-serif;
+  color:#000;
+}
+
+body{background:#f6f5f2;}
+
+header{
+  position:fixed;
+  top:0; left:0;
+  width:100%;
+  padding:28px 60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#fff;
+  z-index:100;
+}
+
+.main-logo img{height:84px;}
+
+.header-right{
+  display:flex;
+  align-items:center;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+}
+
+nav a{
+  margin-left:36px;
+  font-size:14px;
+  letter-spacing:1px;
+  text-decoration:none;
+  color:#000;
+  white-space:nowrap;
+}
+
+.lang-buttons{
+  margin-left:30px;
+  border:1px solid #000;
+  padding:6px 10px;
+  border-radius:6px;
+}
+
+.lang-buttons button{
+  margin:0 4px;
+  font-size:12px;
+  padding:6px 10px;
+  background:transparent;
+  border:1px solid #000;
+  cursor:pointer;
+  border-radius:4px;
+}
+
+.container{
+  max-width:900px;
+  margin:0 auto;
+  padding:180px 40px 120px;
+  background:#fff;
+  box-shadow:0 20px 40px rgba(0,0,0,0.05);
+}
+
+.line{
+  width:60px;
+  height:1px;
+  background:#000;
+  margin-bottom:40px;
+}
+
+h1{
+  font-size:28px;
+  letter-spacing:3px;
+  margin-bottom:80px;
+}
+
+.section{
+  margin-bottom:70px;
+  padding-bottom:50px;
+  border-bottom:1px dashed #ddd;
+}
+.section:last-child{border-bottom:none;}
+
+.section h2{
+  font-size:16px;
+  letter-spacing:2px;
+  margin-bottom:20px;
+}
+
+.section p,
+.section li{
+  font-size:15px;
+  line-height:2;
+}
+
+.section ul{padding-left:18px;}
+
+.agree-box{
+  margin-top:80px;
+  padding:40px;
+  background:#f3f3f3;
+}
+
+.agree-box label{
+  font-size:15px;
+  cursor:pointer;
+}
+
+.agree-box input{margin-right:10px;}
+
+.reserve-btn{
+  display:none;
+  margin-top:30px;
+  padding:14px 40px;
+  background:#000;
+  color:#fff;
+  font-size:14px;
+  letter-spacing:1px;
+  text-decoration:none;
+}
+
+.register{
+  margin-top:100px;
+  padding-top:40px;
+  border-top:1px solid #ddd;
+}
+
+.register h3{
+  font-size:13px;
+  color:#777;
+  margin-bottom:12px;
+}
+
+.register li{
+  font-size:13px;
+  color:#777;
+  line-height:1.8;
+}
+
+@media(max-width:768px){
+  header{padding:20px 24px}
+  .main-logo img{height:64px}
+  .header-right{flex-direction:column;align-items:flex-start;margin-top:10px}
+  nav a{margin-left:20px;font-size:13px}
+  .lang-buttons{margin-left:0;margin-top:10px}
+  .container{padding:140px 20px 100px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html" class="main-logo">
+    <img src="진주헌로고.svg" alt="진주헌">
+  </a>
+
+  <div class="header-right">
+    <nav>
+      <a href="101.html" data-key="nav101">101동</a>
+      <a href="102.html" data-key="nav102">102동</a>
+      <a href="around.html" data-key="navAbout">숙소소개</a>
+      <a href="reservation.html" data-key="navReservation">예약</a>
+    </nav>
+
+    <div class="lang-buttons">
+      <button onclick="changeLanguage('ko')">KO</button>
+      <button onclick="changeLanguage('en')">EN</button>
+      <button onclick="changeLanguage('fr')">FR</button>
+      <button onclick="changeLanguage('zh')">中文</button>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="line"></div>
+  <h1 data-key="reservationTitle">RESERVATION</h1>
+
+  <div class="section">
+    <h2 data-key="bbqTitle">바비큐 시설 안내</h2>
+    <p data-key="bbqDesc">
+      야외 바비큐 마당을 이용하실 수 있습니다.<br>
+      안전을 위해 바람이 부는 날에는 이용이 제한될 수 있습니다.
+    </p>
+    <ul>
+      <li data-key="bbq1">숯 + 그릴 + 토치 1세트</li>
+      <li data-key="bbq2">개별 준비 사용 가능</li>
+      <li data-key="bbq3">숙소 구입 시 20,000원 (당일 오전 예약 필수)</li>
+      <li data-key="bbq4">이용 시간 : 오후 4시 – 오후 10시</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2 data-key="facilityTitle">기타 편의시설</h2>
+    <ul>
+      <li data-key="fac1">전용 주차장</li>
+      <li data-key="fac2">전용 테라스</li>
+      <li data-key="fac3">넓은 만다린 가든 정원</li>
+      <li data-key="fac4">와이파이 무료</li>
+      <li data-key="fac5">넷플릭스 무료</li>
+      <li data-key="fac6">소화기, 일산화탄소 감지기 안전 시설</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2 data-key="noticeTitle">기타 주의사항</h2>
+    <ul>
+      <li data-key="notice1">실내 금연</li>
+      <li data-key="notice2">실내 강한 냄새 조리 지양</li>
+      <li data-key="notice3">외부 바비큐장 이용 요리 가능</li>
+    </ul>
+  </div>
+
+  <div class="agree-box">
+    <label>
+      <input type="checkbox" id="agreeCheck">
+      <span data-key="agreeText">위 내용을 모두 읽었으며, 동의하십니까?</span>
+    </label><br>
+
+    <a
+      id="reserveBtn"
+      class="reserve-btn"
+      href="https://www.airbnb.co.kr/users/profile/1469037031801590338?previous_page_name=PdpHomeMarketplace"
+      target="_blank"
+      data-key="reserveBtn"
+    >
+      예약하기
+    </a>
+  </div>
+
+  <div class="register">
+    <h3 data-key="registerTitle">등록 세부 정보</h3>
+    <ul>
+      <li data-key="reg1">발급 지역 : 제주특별자치도 서귀포시 상예동</li>
+      <li data-key="reg2">허가 유형 : 농어촌민박사업</li>
+      <li data-key="reg3">허가 번호 : 2025-5호</li>
+    </ul>
+  </div>
+
+</div>
+
+<script>
+const check = document.getElementById('agreeCheck');
+const btn = document.getElementById('reserveBtn');
+
+check.addEventListener('change', () => {
+  btn.style.display = check.checked ? 'inline-block' : 'none';
+});
+</script>
+
+<script src="lang.js"></script>
+</body>
+</html>

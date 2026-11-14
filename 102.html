@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>진주헌 Mandarin Garden | 102동</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Pretendard,Noto Sans KR,sans-serif;
+  color:#000;
+}
+  
+
+body{
+  background: linear-gradient(
+    180deg,
+    #f4f7f2 0%,
+    #eef4e8 50%,
+    #f7f9f5 100%
+  );
+  overflow-x:hidden;
+}
+
+header{
+  position:fixed;
+  top:0;left:0;width:100%;
+  padding:28px 60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(255,255,255,0.9);
+  backdrop-filter:blur(6px);
+  z-index:100;
+}
+
+.main-logo img{height:84px;}
+
+.header-right{
+  display:flex;
+  align-items:center;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+}
+
+nav a{
+  margin-left:36px;
+  font-size:14px;
+  letter-spacing:1px;
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+.lang-buttons{
+  margin-left:30px;
+  border:1px solid #000;
+  padding:6px 10px;
+  border-radius:6px;
+}
+
+.lang-buttons button{
+  margin:0 4px;
+  font-size:12px;
+  padding:6px 10px;
+  background:transparent;
+  border:1px solid #000;
+  cursor:pointer;
+  border-radius:4px;
+}
+
+.room-section{
+  padding:180px 110px 120px 110px;
+}
+
+.room-section:nth-child(odd){background:#ffffff;}
+.room-section:nth-child(even){background:#f3f7ef;}
+
+.room-text{margin-bottom:60px;}
+
+.room-text h2{
+  font-size:26px;
+  letter-spacing:2px;
+  margin-bottom:18px;
+}
+
+.room-text p{
+  font-size:15px;
+  line-height:1.8;
+}
+
+.room-gallery{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:20px;
+}
+
+.room-gallery img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:6px;
+  transition:0.3s ease;
+}
+
+.room-gallery img:hover{transform:scale(1.03);}
+
+@media(max-width:768px){
+  header{padding:16px;}
+  .main-logo img{height:64px;}
+  .header-right{flex-direction:column;align-items:flex-start;margin-top:10px;}
+  nav a{margin-left:14px;font-size:13px;}
+  .lang-buttons{margin-left:0;margin-top:10px;}
+  .room-section{padding:120px 28px;}
+  .room-gallery{grid-template-columns:repeat(2, 1fr);gap:14px;}
+  .room-text h2{font-size:20px;}
+  .room-text p{font-size:14px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html" class="main-logo">
+    <img src="진주헌로고.svg" alt="진주헌">
+  </a>
+
+  <div class="header-right">
+    <nav>
+      <a href="101.html" data-key="nav101">101동</a>
+      <a href="102.html" data-key="nav102">102동</a>
+      <a href="around.html" data-key="navAbout">숙소소개</a>
+      <a href="reservation.html" data-key="navReservation">예약</a>
+    </nav>
+
+    <div class="lang-buttons">
+      <button onclick="changeLanguage('ko')">KO</button>
+      <button onclick="changeLanguage('en')">EN</button>
+      <button onclick="changeLanguage('fr')">FR</button>
+      <button onclick="changeLanguage('zh')">中文</button>
+    </div>
+  </div>
+</header>
+
+<!-- LIVING ROOM -->
+<section class="room-section">
+  <div class="room-text">
+    <h2>LIVING ROOM</h2>
+    <p data-key="living102">넓고 쾌적한 거실 · 소파 · 휴식 공간</p>
+  </div>
+  <div class="room-gallery">
+    <img src="102호 거실1.avif">
+    <img src="102호 거실2.avif">
+    <img src="102호 거실5.avif">
+    <img src="102호 거실6.avif">
+    <img src="102호 거실7.avif">
+    <img src="102호 거실8.avif">
+  </div>
+</section>
+
+<!-- KITCHEN -->
+<section class="room-section">
+  <div class="room-text">
+    <h2>KITCHEN</h2>
+    <p data-key="kitchen102">조리 가능 · 기본 주방 기구 구비</p>
+  </div>
+  <div class="room-gallery">
+    <img src="102호 주방3.avif">
+  </div>
+</section>
+
+<!-- BEDROOM 1 -->
+<section class="room-section">
+  <div class="room-text">
+    <h2>BEDROOM 1</h2>
+    <p data-key="bed1_102">퀸사이즈 침대 · 난방 · 암막 커튼 · 에어컨 · 옷걸이 · 의류 보관 공간 · 침구</p>
+  </div>
+  <div class="room-gallery">
+    <img src="102호 침실1.avif">
+    <img src="102호 침실2.avif">
+    <img src="102호 침실3.avif">
+    <img src="102호 침실4.avif">
+  </div>
+</section>
+
+<!-- BEDROOM 2 -->
+<section class="room-section">
+  <div class="room-text">
+    <h2>BEDROOM 2</h2>
+    <p data-key="bed2_102">싱글 침대 · 옷장</p>
+  </div>
+  <div class="room-gallery">
+    <img src="102호 침실2-1.avif">
+    <img src="102호 침실2-3.avif">
+    <img src="102호 침실2-4.avif">
+  </div>
+</section>
+
+<!-- BEDROOM 3 -->
+<section class="room-section">
+  <div class="room-text">
+    <h2>BEDROOM 3</h2>
+    <p data-key="bed3_102">퀸사이즈 침대</p>
+  </div>
+  <div class="room-gallery">
+    <img src="102호 침실3-1.avif">
+    <img src="102호 침실3-2.avif">
+    <img src="102호 침실3-3.avif">
+    <img src="102호 침실3-5.avif">
+  </div>
+</section>
+
+<!-- BATHROOM -->
+<section class="room-section">
+  <div class="room-text">
+    <h2>BATHROOM</h2>
+    <p data-key="bath102">난방 · 샴푸 · 컨디셔너 · 헤어드라이어 · 온수 제공</p>
+  </div>
+  <div class="room-gallery">
+    <img src="102호 욕실1.avif">
+    <img src="102호 욕실2.avif">
+  </div>
+</section>
+
+<!-- HALF BATHROOM -->
+<section class="room-section">
+  <div class="room-text">
+    <h2>HALF BATHROOM</h2>
+    <p data-key="halfBath102">간이 욕실 · 세면 공간</p>
+  </div>
+  <div class="room-gallery">
+    <img src="102호 간이욕실1.avif">
+    <img src="102호 간이욕실2.avif">
+  </div>
+</section>
+
+<!-- BACKYARD -->
+<section class="room-section">
+  <div class="room-text">
+    <h2>BACKYARD & KOREAN BBQ</h2>
+    <p data-key="backyard102">공용 뒷마당 & 바비큐 공간</p>
+  </div>
+  <div class="room-gallery">
+    <img src="102호_바비큐_1.JPG">
+    <img src="102호_바비큐_2.JPG">
+    <img src="뒷마당1.avif">
+    <img src="뒷마당2.avif">
+    <img src="뒷마당3.avif">
+    <img src="뒷마당4.avif">
+    <img src="뒷마당5.avif">
+    <img src="외부1.avif">
+    <img src="외부2.avif">
+    <img src="외부3.avif">
+    <img src="외부4.avif">
+    <img src="외부5.avif">
+    <img src="외부6.avif">
+    <img src="외부7.avif">
+    <img src="외부8.avif">
+    <img src="외부9.avif">
+    <img src="외부10.avif">
+    <img src="외부11.avif">
+    <img src="외부12.avif">
+    <img src="외부13.avif">
+    <img src="외부14.avif">
+  </div>
+</section>
+
+<!-- PATIO -->
+
+<!-- OUTSIDE -->
+
+<script src="lang.js"></script>
+</body>
+
+</html>

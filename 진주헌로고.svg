@@ -1,0 +1,20 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Hanok roof line (minimal) -->
+  <path d="M300 180 Q600 120 900 180" fill="none" stroke="#000000" stroke-width="12" stroke-linecap="round"></path>
+
+  <!-- Korean text -->
+  <text x="600" y="420" text-anchor="middle" fill="#000000" font-size="160" font-weight="700" font-family="Noto Sans KR, Pretendard, Apple SD Gothic Neo, sans-serif">
+    스테이진주헌
+  </text>
+
+  <!-- English text -->
+  <text x="600" y="580" text-anchor="middle" fill="#000000" font-size="96" letter-spacing="6" font-weight="600" font-family="Montserrat, Helvetica, Arial, sans-serif">
+    JINJU HEON
+  </text>
+  
+    <text x="600" y="740" text-anchor="middle" fill="#000000" font-size="96" letter-spacing="6" font-weight="600" font-family="Montserrat, Helvetica, Arial, sans-serif">
+    감귤체험
+  </text>
+
+</svg>
